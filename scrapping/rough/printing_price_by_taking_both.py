@@ -19,10 +19,8 @@ for link in tr:
 		a=b=c=d=""
 		for t in td:
 			if x==4:
-				d=t.text[41:62]
+				d=t.text[45:0]
 			x=x+1
 		records.append((d))
 
 print("The price of "+commodity+" in district "+district+" is "+d+".")
-df=pd.DataFrame(records,columns=['Price'])
-df.to_csv('input_both_output_only_price.csv',index=False,encoding='utf-8')
