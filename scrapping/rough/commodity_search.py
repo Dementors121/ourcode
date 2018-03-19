@@ -24,6 +24,8 @@ for link in tr:
 				c=t.text[1:-1]
 			elif x==4:
 				d=t.text[45:-1]
+			else:
+				e=t.text
 			x=x+1
 		records.append((a,b,c,d))
 
