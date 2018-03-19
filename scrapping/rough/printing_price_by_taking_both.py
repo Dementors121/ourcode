@@ -19,7 +19,7 @@ for link in tr:
 		a=b=c=d=""
 		for t in td:
 			if x==4:
-				d=t.text[45:0]
+				d=t.text[41:63]
 			x=x+1
 		records.append((d))
 
