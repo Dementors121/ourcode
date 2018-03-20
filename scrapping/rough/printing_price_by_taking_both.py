@@ -3,8 +3,8 @@ from bs4 import BeautifulSoup
 import pandas as pd
 
 
-commodity='potato'
-district='ajmer'
+commodity='jowar+white'
+district='udaipur'
 commodity=commodity.upper()
 district=district.upper()
 r=requests.get("https://www.mandiguru.co.in/daily-bhav/rajasthan?date_from=&date_to=&mandi="+district+"+%28F+%26+V%29&product="+commodity+"+&search=Search")
@@ -24,3 +24,4 @@ for link in tr:
 		records.append((d))
 
 print("The price of "+commodity+" in district "+district+" is "+d+".")
+
