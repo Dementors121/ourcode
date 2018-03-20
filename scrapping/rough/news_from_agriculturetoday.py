@@ -1,13 +1,15 @@
 
 import  requests
 from bs4 import BeautifulSoup
-r=requests.get("http://www.agriculturetoday.in/")
+r=requests.get("https://economictimes.indiatimes.com/news/economy/agriculture")
 soup=BeautifulSoup(r.content, "html.parser")
-trr=soup.find_all("span",attrs={"style":"font-weight:bold;color:Black;"})
-for t in trr:
-	print(t.text)
-	break
 
+pp=soup.find("div",attrs={"class":"eachStory"})
+qq=pp.find("h3")
+rr=pp.find("p")
+
+print(qq.text)
+print(rr.text)
 
 
 # for link in trr:
